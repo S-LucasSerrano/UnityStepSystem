@@ -1,0 +1,15 @@
+{
+	"name": "com.lucasserrano.stepsystem",
+	"displayName": "Step System",
+	"version":"1.0.0",
+	"description": "Unity package to create event sequences and linear experiences.",
+	"author": "S. Lucas Serrano",
+	"samples":
+	[
+		{
+			"displayName":"Basic Usage",
+			"description":"Simple scene that shows how to use this package.",
+			"path":"Samples/Usage"
+		}
+	]
+}
