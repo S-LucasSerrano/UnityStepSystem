@@ -21,15 +21,15 @@ namespace LucasSerrano.StepSystem.Editor
 		static StepChain_CustomHierarchy()
 		{
 			// Add listener to event that Unity fires every time it redraws an item of the hierarchy.
-			EditorApplication.hierarchyWindowItemOnGUI += OnDrawHierarchyItem;
+			EditorApplication.hierarchyWindowItemByEntityIdOnGUI += OnDrawHierarchyItem;
 		}
 
-		static void OnDrawHierarchyItem(int instanceId, Rect selectionRect)
+		static void OnDrawHierarchyItem(EntityId entityId, Rect selectionRect)
 		{
 			// InistaceId - indicates the object for which this function was called.
 			// SelectonRect - is the area in the hierarchy window that the label of that object occupies.
 
-			GameObject hierarchyItem = EditorUtility.EntityIdToObject(instanceId) as GameObject;
+			GameObject hierarchyItem = EditorUtility.EntityIdToObject(entityId) as GameObject;
 			if (hierarchyItem == null)
 				return;
 			Step[] steps = hierarchyItem.GetComponents<Step>();
